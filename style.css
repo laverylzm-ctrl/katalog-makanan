@@ -1,0 +1,85 @@
+/* Reset Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+nav {
+  padding: 2rem 5%;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hero {
+  padding: 4rem 5%;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  color: #999;
+}
+
+/* Grid Menu */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 5% 5rem 5%;
+}
+
+/* Container Item */
+.menu-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden; /* Agar gambar tidak keluar dari border radius */
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+/* PERBAIKAN GAMBAR: Agar tidak bug/aneh */
+.menu-img {
+  width: 100%;
+  height: 250px; /* Tinggi kotak gambar dikunci */
+  object-fit: cover; /* Gambar akan dipotong rapi, tidak gepeng */
+  display: block; /* Menghilangkan gap kecil di bawah gambar */
+  background-color: #f7f7f7; /* Warna cadangan jika gambar gagal load */
+}
+
+.info {
+  padding: 20px 0;
+}
+
+.info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.info p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #000;
+}
