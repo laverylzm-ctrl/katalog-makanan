@@ -3,49 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lopier — E-Catalog</title>
+    <title>Lopier — Modern E-Catalog</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav>
         <div class="logo">LOPIER</div>
+        <div class="status">Buka • 10:00 - 22:00</div>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <h1>Lopier <br /><span>Dining.</span></h1>
-        <p>E-Catalog makanan pilihan dengan cita rasa autentik.</p>
+        <h1>Fine Dining <br /><span>Simplified.</span></h1>
+        <p>
+          Jelajahi menu pilihan kami yang dibuat dengan bahan organik terbaik.
+        </p>
       </section>
 
-      <section class="menu-grid">
-        <article class="menu-item">
-          <img
-            src="images/TrufflePasta.png"
-            alt="Truffle Pasta"
-            class="menu-img"
-          />
-          <div class="info">
-            <h3>Truffle Pasta</h3>
-            <p>Pasta dengan saus jamur truffle hitam.</p>
-            <span class="price">Rp 85.000</span>
-          </div>
-        </article>
+      <div class="filter-container">
+        <button class="btn-filter active" data-id="all">Semua</button>
+        <button class="btn-filter" data-id="makanan">Makanan</button>
+        <button class="btn-filter" data-id="minuman">Minuman</button>
+      </div>
 
-        <article class="menu-item">
-          <img
-            src="images/GrilledRibeye.png"
-            alt="Grilled Ribeye"
-            class="menu-img"
-          />
-          <div class="info">
-            <h3>Grilled Ribeye</h3>
-            <p>Daging sapi premium dengan saus rosemary.</p>
-            <span class="price">Rp 150.000</span>
-          </div>
-        </article>
-      </section>
+      <section class="menu-grid" id="menu-container"></section>
     </main>
+
+    <footer>
+      <p>&copy; 2026 Lopier Restaurant. Dibuat dengan minimalisme.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
