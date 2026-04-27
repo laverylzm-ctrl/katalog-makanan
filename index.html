@@ -1,44 +1,107 @@
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lopier — Modern E-Catalog</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">LOPIER</div>
-        <div class="status">Buka • 10:00 - 22:00</div>
-      </nav>
-    </header>
+<!DOCTYPE html>
 
-    <main>
-      <section class="hero">
-        <h1>Fine Dining <br /><span>Simplified.</span></h1>
-        <p>
-          Jelajahi menu pilihan kami yang dibuat dengan bahan organik terbaik.
-        </p>
-      </section>
+<html lang="en">
 
-      <div class="filter-container">
-        <button class="btn-filter active" data-id="all">Semua</button>
-        <button class="btn-filter" data-id="makanan">Makanan</button>
-        <button class="btn-filter" data-id="minuman">Minuman</button>
-      </div>
+<head>
 
-      <section class="menu-grid" id="menu-container"></section>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Lopier | Fine Dining Experience</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body class="bg-[#faf9f6] text-[#1a1a1a] antialiased">
+
+
+
+    <div id="global-overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm z- hidden transition-all duration-500"></div>
+
+
+
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
+
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+
+            <div class="text-2xl font-serif tracking-[0.3em] text-[#b4924a]">LOPIER</div>
+
+            <div class="hidden md:flex space-x-8 text-[10px] tracking-[0.2em] uppercase font-medium">
+
+                <a href="#food" class="hover:text-[#b4924a] transition">Epicurean Menu</a>
+
+                <a href="#drinks" class="hover:text-[#b4924a] transition">Vintages & Spirits</a>
+
+            </div>
+
+            <div class="text-[10px] tracking-widest text-gray-400">EST. 2026</div>
+
+        </div>
+
+    </nav>
+
+
+
+    <main class="pt-28 pb-32 max-w-7xl mx-auto px-4">
+
+        <section id="food" class="mb-20">
+
+            <h2 class="text-center font-serif text-3xl mb-12 italic">The Main Course</h2>
+
+            <div id="food-container" class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8"></div>
+
+        </section>
+
+
+
+        <section id="drinks" class="mb-20 border-t border-gray-100 pt-20">
+
+            <h2 class="text-center font-serif text-3xl mb-12 italic">Liquid Gold</h2>
+
+            <div id="drinks-container" class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8"></div>
+
+        </section>
+
     </main>
 
-    <footer>
-      <p>&copy; 2026 Lopier Restaurant. Dibuat dengan minimalisme.</p>
-    </footer>
+
+
+    <div id="floating-cart" class="fixed bottom-6 right-6 z-" onclick="toggleCartModal()">
+
+        <div class="relative bg-[#1a1a1a] p-5 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] cursor-pointer hover:scale-105 transition-transform active:scale-95">
+
+            <i data-lucide="shopping-bag" class="text-[#d4af37] w-6 h-6"></i>
+
+            <div id="cart-badge" class="absolute -top-2 -right-2 bg-[#d4af37] text-white text-[10px] font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-[#1a1a1a] hidden">0</div>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="main-modal" class="fixed inset-0 z- hidden flex items-center justify-center p-4">
+
+        <div id="modal-content" class="bg-white w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl relative animate-pop">
+
+            </div>
+
+    </div>
+
+
 
     <script src="script.js"></script>
-  </body>
+
+    <script>lucide.createIcons();</script>
+
+</body>
+
 </html>
